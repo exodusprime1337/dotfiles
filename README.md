@@ -17,12 +17,13 @@
 After installing the prerequisite software contine with the following steps. 
 1. Clone this repo into your home folder
 2. CD into repo directory
-3. Run the following command to stow your dotfiles in your home file.
-- `stow .`
-3. Run the ansible playbook inside of this repository
+3. Run the following commands to stow your dotfiles in your home folder
+ - `stow --adopt *`
+ - `git restore .`
+ - `stow .`
+4. Run the ansible playbook inside of this repository
 - `ansible-playbook setup_mac.yml -K`
-4. Open iterm2 and set up your profile. 
+5. Open iterm2 and set up your profile. 
     - Open settings, then profile, then text.
     - Set font to Firacode Nerdfont Mono
     - Click checkbox for font ligature to enable them
-5. 
