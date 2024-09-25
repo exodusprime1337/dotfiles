@@ -4,18 +4,25 @@
 
 1. Install homebrew
 - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-2. Install ansible
+2. Install stow
+- `brew install stow`
+3. Install ansible
 - `brew install ansible`
-3. Install iterm2
+4. Install iterm2
 - `brew install --cask iterm2`
-4. Download and install vscode. 
+5. Download and install vscode. 
 - [Download Here](https://www.genome.gov/)
 
 ## Steps to get up and running
 After installing the prerequisite software contine with the following steps. 
-1. Run the ansible playbook inside of this repository
+1. Clone this repo into your home folder
+2. CD into repo directory
+3. Run the following command to stow your dotfiles in your home file.
+- `stow .`
+3. Run the ansible playbook inside of this repository
 - `ansible-playbook setup_mac.yml -K`
-2. Open iterm2 and set up your profile. 
+4. Open iterm2 and set up your profile. 
     - Open settings, then profile, then text.
     - Set font to Firacode Nerdfont Mono
     - Click checkbox for font ligature to enable them
+5. 
