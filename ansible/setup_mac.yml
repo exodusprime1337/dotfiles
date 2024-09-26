@@ -1,0 +1,9 @@
+---
+- name: Mac Setup Base Playbook
+  hosts: 127.0.0.1
+  connection: local
+  vars:
+    install_homebrew: true
+    install_pyenv: true
+  roles:
+    - setup_mac

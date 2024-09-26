@@ -1,0 +1,13 @@
+- name: Install ZSH AutoSuggestions
+  ansible.builtin.shell: brew install zsh-autosuggestions
+- name: Check if ZSH Autocomplete already clone
+  stat:
+    path: "~/zsh-autocomplete"
+  register: zsh_autocomplete_folder_present
+- name: Warn of ZSH Autocomplete present
+  debug:
+    msg: ZSH Autocomplete folder dir exists
+  when: zsh_autocomplete_folder_present.stat.exists
+- name: Pull down ZSH Autocomplete
+  ansible.builtin.shell: git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/zsh-autocomplete
+  when: not zsh_autocomplete_folder_present.stat.exists

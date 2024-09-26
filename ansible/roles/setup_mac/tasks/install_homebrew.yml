@@ -1,0 +1,6 @@
+- name: Check if homebrew is installed
+  ansible.builtin.shell: which brew
+  register: brew_check
+- name: Install homebrew if not found in system
+  ansible.builtin.shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  when: brew_check.stdout.find('not found') != -1
