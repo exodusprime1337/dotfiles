@@ -1,0 +1,19 @@
+---
+- name: Include install homebrew
+  import_tasks: install_homebrew.yml
+  when: install_homebrew
+- name: Include install pyenv
+  import_tasks: install_pyenv.yml
+  when: install_pyenv
+- name: Include install Oh My Posh
+  import_tasks: install_oh_my_posh.yml
+- name: Include install ZSH Addons
+  import_tasks: install_zsh_addons.yml
+- name: Include install ColorLS
+  import_tasks: install_color_ls.yml
+- name: Include install FuzzyFinder
+  import_tasks: install_fuzzy_finder.yml
+- name: include install fonts
+  import_tasks: install_fonts.yml
+- name: include install tldr
+  import_tasks: install_tldr.yml

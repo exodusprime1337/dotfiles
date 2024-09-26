@@ -1,0 +1,6 @@
+- name: Check if FuzzyFinder is installed
+  ansible.builtin.shell: which brew
+  register: fzf_check
+- name: Install FZF(FuzzyFinder)
+  ansible.builtin.shell: brew install fzf
+  when: fzf_check.stdout.find('not found') != -1

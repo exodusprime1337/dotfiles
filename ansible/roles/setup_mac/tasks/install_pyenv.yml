@@ -1,0 +1,6 @@
+- name: Check if pyenv installed
+  ansible.builtin.shell: which pyenv
+  register: pyenv_check
+- name: Install Pyenv
+  ansible.builtin.shell: brew update && brew install pyenv
+  when: pyenv_check.stdout.find('not found') != -1

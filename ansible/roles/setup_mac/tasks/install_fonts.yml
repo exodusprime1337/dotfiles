@@ -1,0 +1,4 @@
+- name: Install FiraCode Nerd font
+  ansible.builtin.copy:
+    src: FiraCodeNerdFontMono-Medium.ttf
+    dest: ~/Library/Fonts/FiraCodeNerdFontMono-Medium.ttf
