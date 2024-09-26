@@ -5,6 +5,7 @@
   vars:
     install_homebrew: true
     install_pyenv: true
+    install_nvm: true
     install_colorls: false # will need to comment out eza config and uncomment colorls config in .zshrc
     install_eza: true # will need to comment out colorls config and uncomment eza config in .zshrc
     install_bat: true # if set to false, ensure bat alias is commented out. 

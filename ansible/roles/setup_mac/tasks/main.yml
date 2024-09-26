@@ -27,3 +27,6 @@
 - name: include install ripgrep
   import_tasks: install_ripgrep.yml
   when: install_ripgrep
+- name: Include install nvm
+  import_tasks: install_nvm.yml
+  when: install_nvm
