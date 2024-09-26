@@ -22,7 +22,7 @@ After installing the prerequisite software contine with the following steps.
  - `git restore .`
  - `stow .`
 4. Run the ansible playbook inside of this repository
-- `ansible-playbook setup_mac.yml -K`
+- `./ansible/ansible-playbook setup_mac.yml -K`
 5. Open iterm2 and set up your profile. 
     - Open settings, then profile, then text.
     - Set font to Firacode Nerdfont Mono
