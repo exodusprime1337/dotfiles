@@ -1,0 +1,2 @@
+- name: Install latest eza
+  ansible.builtin.shell: brew install eza

@@ -11,9 +11,19 @@
   import_tasks: install_zsh_addons.yml
 - name: Include install ColorLS
   import_tasks: install_color_ls.yml
+  when: install_colorls
 - name: Include install FuzzyFinder
   import_tasks: install_fuzzy_finder.yml
 - name: include install fonts
   import_tasks: install_fonts.yml
 - name: include install tldr
   import_tasks: install_tldr.yml
+- name: include install eza
+  import_tasks: install_eza.yml
+  when: install_eza
+- name: include install bat
+  import_tasks: install_bat.yml
+  when: install_bat
+- name: include install ripgrep
+  import_tasks: install_ripgrep.yml
+  when: install_ripgrep

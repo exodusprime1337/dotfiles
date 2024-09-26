@@ -1,0 +1,2 @@
+- name: Install ripgrep
+  ansible.builtin.shell: brew install ripgrep

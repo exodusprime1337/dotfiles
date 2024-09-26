@@ -18,6 +18,14 @@ eval "$(pyenv virtualenv-init -)"
     echo "Weather unavailable"
 }
 
+# Replace ls, ll, and tree with exa
+alias ls="eza"
+alias ll="eza -alh"
+alias tree="eza --tree"
+
+# Replace cat with bat
+alias cat="bat"
+
 # ZSH Autocomplete
 source "$HOME/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
@@ -28,9 +36,9 @@ source <(fzf --zsh)
 export ENV_VARS_FILE="$HOME/.other_keys"
 [[ -f $ENV_VARS_FILE ]] && source $ENV_VARS_FILE
 
-# must be at end
-alias ls='colorls --sort-dirs -1'
-alias lc='colorls -lA --sd'
+# # must be at end
+# alias ls='colorls --sort-dirs -1'
+# alias lc='colorls -lA --sd'
 
 # ZSH AutoSuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
