@@ -3,7 +3,7 @@
   hosts: 127.0.0.1
   connection: local
   vars:
-    install_homebrew: true
+    install_homebrew: false
     install_pyenv: true
     install_nvm: true
     install_colorls: false # will need to comment out eza config and uncomment colorls config in .zshrc
