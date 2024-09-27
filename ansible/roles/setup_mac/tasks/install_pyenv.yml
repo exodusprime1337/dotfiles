@@ -4,3 +4,6 @@
 - name: Install Pyenv
   ansible.builtin.shell: brew update && brew install pyenv
   when: pyenv_check.stdout.find('not found') != -1
+- name: Install Pyenv 
+  ansible.builtin.shell: brew install pyenv-virtualenv
+  when: pyenv_check.stdout.find('not found') != -1
