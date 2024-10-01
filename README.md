@@ -11,7 +11,7 @@
 4. Install iterm2
 - `brew install --cask iterm2`
 5. Download and install vscode. 
-- [Download Here](https://www.genome.gov/)
+- [Download Here](https://www.code.visualstudio.com)
 
 ## Steps to get up and running
 After installing the prerequisite software contine with the following steps. 
