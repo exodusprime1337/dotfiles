@@ -42,9 +42,5 @@ source <(fzf --zsh)
 export ENV_VARS_FILE="$HOME/.other_keys"
 [[ -f $ENV_VARS_FILE ]] && source $ENV_VARS_FILE
 
-# # must be at end
-# alias ls='colorls --sort-dirs -1'
-# alias lc='colorls -lA --sd'
-
 # ZSH AutoSuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
