@@ -1,8 +1,8 @@
-# - name: Check if TLDR is installed
-#   ansible.builtin.shell: which tldr
-#   register: tldr_check
-#   ignore_errors: true
+- name: Check if TLDR installed
+  ansible.builtin.shell: which tldr
+  register: tldr_check
+  failed_when: tldr_check.rc >= 2
 - name: Install latest TLDR
   ansible.builtin.shell: brew install tldr
-  # when: tldr_check.stdout.find('not found') != -1
+  when: tldr_check.rc != 0
 

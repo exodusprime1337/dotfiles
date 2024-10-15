@@ -1,2 +1,7 @@
+- name: Check if bat is installed
+  ansible.builtin.shell: which bat
+  register: check_bat
+  failed_when: check_bat.rc >= 2
 - name: Install bat
   ansible.builtin.shell: brew install bat
+  when: check_bat.rc != 0

@@ -1,2 +1,7 @@
+- name: Check if RipGrep installed
+  ansible.builtin.shell: which rg
+  register: rg_check
+  failed_when: rg_check.rc >= 2
 - name: Install ripgrep
   ansible.builtin.shell: brew install ripgrep
+  when: rg_check.rc != 0

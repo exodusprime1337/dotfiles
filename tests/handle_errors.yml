@@ -1,0 +1,28 @@
+---
+- name: Mac Setup Base Playbook
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+    # - name: test which command
+    #   ansible.builtin.shell: which cat
+    #   register: diff_cmd
+    #   failed_when: diff_cmd.rc >= 2
+    # - name: debug register command
+    #   debug:
+    #     msg: "{{diff_cmd.rc}}"
+    # - name: debug register command
+    #   debug:
+    #     msg: "app gave errors"
+    #   when: diff_cmd.rc != 0
+    # - name: was successfull
+    #   debug:
+    #     msg: "Success!!"
+    #   when: diff_cmd.rc == 0
+
+    - name: Check if pyenv virtualenv installed
+      ansible.builtin.shell: which pyenv-virtualenv
+      register: pyenv_virtenv_check
+      failed_when: pyenv_virtenv_check.rc >= 2
+    - name: debug register command
+      debug:
+        msg: "{{pyenv_virtenv_check.rc}}"

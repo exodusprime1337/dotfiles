@@ -1,6 +1,7 @@
 - name: Check if Oh My Posh is installed
   ansible.builtin.shell: which oh-my-posh
   register: posh_check
+  failed_when: posh_check.rc >= 2
 - name: Install latest Oh My Posh
   ansible.builtin.shell: brew install jandedobbeleer/oh-my-posh/oh-my-posh
-  when: posh_check.stdout.find('not found') != -1
+  when: posh_check.rc != 0
