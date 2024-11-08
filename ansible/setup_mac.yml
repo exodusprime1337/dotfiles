@@ -11,5 +11,6 @@
     install_eza: true # will need to comment out colorls config and uncomment eza config in .zshrc
     install_bat: true # if set to false, ensure bat alias is commented out.
     install_ripgrep: true
+    configure_macos: true # Clear items from the dock and other misc settings added here
   roles:
     - setup_mac

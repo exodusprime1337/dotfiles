@@ -33,3 +33,6 @@
 - name: Install misc apps
   import_tasks: install_misc_apps.yml
   when: install_misc_apps
+- name: Configure macOS settings
+  import_tasks: configure_macos.yml
+  when: configure_macos
