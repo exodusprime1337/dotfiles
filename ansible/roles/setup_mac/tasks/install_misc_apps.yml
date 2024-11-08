@@ -1,0 +1,23 @@
+- name: Check if slack is installed
+  ansible.builtin.shell: brew list slack
+  register: check_slack
+  failed_when: check_slack.rc >= 2
+- name: Install slack if not found in system
+  ansible.builtin.shell: brew install --cask slack
+  when: check_slack.rc != 0
+
+- name: Check if iterm2 is installed
+  ansible.builtin.shell: brew list iterm2
+  register: check_iterm2
+  failed_when: check_iterm2.rc >= 2
+- name: Install iterm2 if not found in system
+  ansible.builtin.shell: brew install --cask iterm2
+  when: check_iterm2.rc != 0
+
+- name: Check if VS Code is installed
+  ansible.builtin.shell: brew install --cask visual-studio-code
+  register: check_vscode
+  failed_when: check_vscode.rc >= 2
+- name: Install iterm2 if not found in system
+  ansible.builtin.shell: brew install --cask iterm2
+  when: check_vscode.rc != 0

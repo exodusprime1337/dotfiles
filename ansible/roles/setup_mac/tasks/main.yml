@@ -30,3 +30,6 @@
 - name: Include install nvm
   import_tasks: install_nvm.yml
   when: install_nvm
+- name: Install misc apps
+  import_tasks: install_misc_apps.yml
+  when: install_misc_apps

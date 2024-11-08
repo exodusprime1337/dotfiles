@@ -39,7 +39,7 @@ source "$HOME/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 # FZF(FuzzyFinder)
 source <(fzf --zsh)
 
-# Include other environment file
+# Include other environment file if present
 export ENV_VARS_FILE="$HOME/.other_keys"
 [[ -f $ENV_VARS_FILE ]] && source $ENV_VARS_FILE
 
