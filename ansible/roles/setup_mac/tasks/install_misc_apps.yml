@@ -15,9 +15,18 @@
   when: check_iterm2.rc != 0
 
 - name: Check if VS Code is installed
-  ansible.builtin.shell: brew install --cask visual-studio-code
+  ansible.builtin.shell: brew list visual-studio-code
   register: check_vscode
   failed_when: check_vscode.rc >= 2
-- name: Install iterm2 if not found in system
-  ansible.builtin.shell: brew install --cask iterm2
+- name: Install VS Code if not found in system
+  ansible.builtin.shell: brew install visual-studio-code
   when: check_vscode.rc != 0
+
+- name: Check if MacPass is installed
+  ansible.builtin.shell: brew list macpass
+  register: check_macpass
+  failed_when: check_macpass.rc >= 2
+- name: Install MacPass if not found in system
+  ansible.builtin.shell: brew install --cask macpass
+  when: check_macpass.rc != 0
+

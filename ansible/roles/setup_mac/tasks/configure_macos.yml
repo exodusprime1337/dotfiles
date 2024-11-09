@@ -5,6 +5,7 @@
   ansible.builtin.shell: which htop
   register: check_htop
   failed_when: check_htop.rc >= 2
+
 - name: Install bat
   ansible.builtin.shell: brew install top
   when: check_htop.rc != 0
@@ -13,6 +14,7 @@
   ansible.builtin.shell: which bpytop
   register: check_bpytop
   failed_when: check_bpytop.rc >= 2
+  
 - name: Install bat
   ansible.builtin.shell: brew install bpytop
   when: check_bpytop.rc != 0

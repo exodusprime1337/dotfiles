@@ -2,6 +2,7 @@
   ansible.builtin.shell: which brew
   register: check_brew
   failed_when: check_brew.rc >= 2
+  
 - name: Install homebrew if not found in system
   ansible.builtin.shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   when: check_brew.rc != 0

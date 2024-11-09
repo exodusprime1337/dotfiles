@@ -1,8 +1,10 @@
 - name: Install Ruby with Homebrew
   ansible.builtin.shell: brew install ruby
+
 - name: Check if colorLS is installed
   ansible.builtin.shell: which colorls
   register: colorls_check
+  
 - name: Install ColorLS
   ansible.builtin.shell: gem install colorls
   become: true
