@@ -39,7 +39,6 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 3. Install ansible
     - `brew install ansible`
 
-
 ## Steps to get up and running
 After installing the prerequisite software contine with the following steps. 
 1. Clone this repo into your home folder.
