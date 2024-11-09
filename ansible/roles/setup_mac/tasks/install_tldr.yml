@@ -1,9 +1,0 @@
-- name: Check if TLDR installed
-  ansible.builtin.shell: which tldr
-  register: tldr_check
-  failed_when: tldr_check.rc >= 2
-  
-- name: Install latest TLDR
-  ansible.builtin.shell: brew install tldr
-  when: tldr_check.rc != 0
-

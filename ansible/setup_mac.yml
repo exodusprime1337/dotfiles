@@ -3,14 +3,9 @@
   hosts: 127.0.0.1
   connection: local
   vars:
-    install_homebrew: false
-    install_misc_apps: true # This will install apps such as iterm2, vscode, and slack
-    install_pyenv: true
-    install_nvm: true
-    install_colorls: false # will need to comment out eza config and uncomment colorls config in .zshrc
-    install_eza: true # will need to comment out colorls config and uncomment eza config in .zshrc
-    install_bat: true # if set to false, ensure bat alias is commented out.
-    install_ripgrep: true
-    configure_macos: true # Clear items from the dock and other misc settings added here
+    install_desktop_apps: true
+    install_terminal_apps: true
+    install_developer_apps: true
+    install_developer_fonts: true
   roles:
     - setup_mac

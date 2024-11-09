@@ -10,7 +10,3 @@
     - name: repeat registered message
       ansible.builtin.debug:
         msg: "{{ check_slack }}"
-      # failed_when: check_brew.rc >= 2
-    # - name: Install slack if not found in system
-    #   ansible.builtin.shell: brew install --cask slack
-    #   when: check_slack.rc != 0

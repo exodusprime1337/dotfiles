@@ -1,0 +1,79 @@
+- name: Check if Oh My Posh is installed
+  ansible.builtin.shell: which oh-my-posh
+  register: posh_check
+  failed_when: posh_check.rc >= 2
+- name: Install latest Oh My Posh
+  ansible.builtin.shell: brew install jandedobbeleer/oh-my-posh/oh-my-posh
+  when: posh_check.rc != 0
+
+- name: Install ZSH AutoSuggestions
+  ansible.builtin.shell: brew install zsh-autosuggestions
+
+- name: Check if ZSH Autocomplete already clone
+  stat:
+    path: "~/zsh-autocomplete"
+  register: zsh_autocomplete_folder_present
+- name: Warn of ZSH Autocomplete present
+  debug:
+    msg: ZSH Autocomplete folder dir exists
+  when: zsh_autocomplete_folder_present.stat.exists
+- name: Pull down ZSH Autocomplete
+  ansible.builtin.shell: git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/zsh-autocomplete
+  when: not zsh_autocomplete_folder_present.stat.exists
+
+- name: Check if HTOP is installed
+  ansible.builtin.shell: which htop
+  register: check_htop
+  failed_when: check_htop.rc >= 2
+- name: Install HTOP
+  ansible.builtin.shell: brew install htop
+  when: check_htop.rc != 0
+
+- name: Check if BPYTOP is installed
+  ansible.builtin.shell: which bpytop
+  register: check_bpytop
+  failed_when: check_bpytop.rc >= 2
+- name: Install BPYTOP
+  ansible.builtin.shell: brew install bpytop
+  when: check_bpytop.rc != 0
+
+- name: Check if bat is installed
+  ansible.builtin.shell: which bat
+  register: check_bat
+  failed_when: check_bat.rc >= 2
+- name: Install bat
+  ansible.builtin.shell: brew install bat
+  when: check_bat.rc != 0
+
+- name: Check if eza is installed
+  ansible.builtin.shell: which eza
+  register: check_eza
+  failed_when: check_eza.rc >= 2
+- name: Install latest eza
+  ansible.builtin.shell: brew install eza
+  when: check_eza.rc != 0
+
+- name: Check if FuzzyFinder is installed
+  ansible.builtin.shell: which fzf
+  register: check_fzf
+  failed_when: check_fzf.rc >= 2
+- name: Install FZF(FuzzyFinder)
+  ansible.builtin.shell: brew install fzf
+  when: check_fzf.rc != 0
+
+- name: Check if RipGrep installed
+  ansible.builtin.shell: which rg
+  register: rg_check
+  failed_when: rg_check.rc >= 2
+- name: Install RipGrep
+  ansible.builtin.shell: brew install ripgrep
+  when: rg_check.rc != 0
+
+- name: Check if TLDR installed
+  ansible.builtin.shell: which tldr
+  register: tldr_check
+  failed_when: tldr_check.rc >= 2
+- name: Install latest TLDR
+  ansible.builtin.shell: brew install tldr
+  when: tldr_check.rc != 0
+

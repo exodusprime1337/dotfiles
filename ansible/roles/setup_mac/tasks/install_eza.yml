@@ -1,8 +1,0 @@
-- name: Check if eza is installed
-  ansible.builtin.shell: which eza
-  register: check_eza
-  failed_when: check_eza.rc >= 2
-  
-- name: Install latest eza
-  ansible.builtin.shell: brew install eza
-  when: check_eza.rc != 0
