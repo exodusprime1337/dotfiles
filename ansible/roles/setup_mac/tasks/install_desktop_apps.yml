@@ -30,3 +30,10 @@
   ansible.builtin.shell: brew install --cask macpass
   when: check_macpass.rc != 0
 
+- name: Check if Postman is installed
+  ansible.builtin.shell: brew list postman
+  register: check_postman
+  failed_when: check_postman.rc >= 2
+- name: Install Postman if not found in system
+  ansible.builtin.shell: brew install --cask postman
+  when: check_postman.rc != 0

@@ -14,6 +14,7 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 - iterm2
 - VSCode
 - MacPass
+- Postman
 
 ### Terminal Apps
 - Oh My Posh

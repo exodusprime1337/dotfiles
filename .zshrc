@@ -36,3 +36,4 @@ export ENV_VARS_FILE="$HOME/.other_keys"
 
 # ZSH AutoSuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+. "$HOME/.local/bin/env"
