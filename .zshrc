@@ -11,6 +11,10 @@ eval "$(pyenv init -)"
 # Load pyenv-virtualenv automatically
 eval "$(pyenv virtualenv-init -)"
 
+# Enable shell autocompletion for UV
+echo 'eval "$(uv generate-shell-completion zsh)"'
+echo 'eval "$(uvx --generate-shell-completion zsh)"'
+
 # Enable NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
