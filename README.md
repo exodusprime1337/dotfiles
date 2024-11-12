@@ -6,7 +6,7 @@ to ensure that each new mac is set up consistently.
 
 This setup environment relies on GNU stow to replicate certain folders and files up one directory to the root of the home folder. From there you can run the ansible playbook in this repository to installed the below listed apps.
 
-Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.json` or `config.toml` file. You can replace the contents of this file with any theme you'd like to change look and feel of the terminal.
+Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.json` or `config.toml` file. You can replace the contents of this file with any theme you'd like to change look and feel of the terminal. Make sure to edit the .zshrc to target your particular profile. 
 
 ## What is installed with this repository?
 ### Desktop Apps
@@ -33,6 +33,7 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 - NVM
 - Pyenv
 - Pyenv VirtualEnv
+- UV python package manager
 
 ## Prerequisite software. 
 1. Install homebrew
