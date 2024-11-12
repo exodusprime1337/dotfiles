@@ -50,6 +50,6 @@
   ansible.builtin.shell: brew list google-chrome
   register: check_chrome
   failed_when: check_chrome.rc >= 2
-- name: Install Firefox if not found in system
+- name: Install Chrome if not found in system
   ansible.builtin.shell: brew install --cask google-chrome
   when: check_chrome.rc != 0
