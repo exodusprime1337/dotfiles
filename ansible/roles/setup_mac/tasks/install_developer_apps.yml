@@ -20,4 +20,12 @@
   failed_when: pyenv_virtenv_check.rc >= 2
 - name: Install Pyenv Virtualenv
   ansible.builtin.shell: brew install pyenv-virtualenv
-  when: pyenv_virtenv_check != 0
+  when: pyenv_virtenv_check.rc != 0
+
+- name: Check if UV installed
+  ansible.builtin.shell: which uv
+  register: uv_check
+  failed_when: uv_check.rc >= 2
+- name: Install UV
+  ansible.builtin.shell: brew install uv
+  when: uv_check.rc != 0
