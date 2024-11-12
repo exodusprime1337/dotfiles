@@ -77,3 +77,10 @@
   ansible.builtin.shell: brew install tldr
   when: tldr_check.rc != 0
 
+- name: Check if AWS CLI installed
+  ansible.builtin.shell: which aws
+  register: awscli_check
+  failed_when: awscli_check.rc >= 2
+- name: Install AWS CLI
+  ansible.builtin.shell: brew install awscli
+  when: awscli_check.rc != 0
