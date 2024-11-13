@@ -29,3 +29,11 @@
 - name: Install UV
   ansible.builtin.shell: brew install uv
   when: uv_check.rc != 0 and install_uv
+
+- name: Check if Docker Desktop installed
+  ansible.builtin.shell: brew list docker
+  register: docker_check
+  failed_when: docker_check.rc >= 2
+- name: Install Docker Desktop
+  ansible.builtin.shell: brew install --cask docker
+  when: docker_check.rc != 0 and install_docker

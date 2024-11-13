@@ -39,6 +39,7 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
     - Pyenv Virtenv Docs: https://github.com/pyenv/pyenv-virtualenv
 - UV python package manager
     - UV Docs: https://github.com/astral-sh/uv
+- Docker Desktop
 
 ## Prerequisite software. 
 1. Install homebrew
