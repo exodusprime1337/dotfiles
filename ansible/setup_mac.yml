@@ -13,6 +13,7 @@
     # Desktop apps
     install_firefox: true
     install_chrome: true
+    install_discord: true
 
     # Terminal apps
     install_awscli: true

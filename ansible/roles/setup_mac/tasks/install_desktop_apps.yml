@@ -53,3 +53,12 @@
 - name: Install Chrome if not found in system
   ansible.builtin.shell: brew install --cask google-chrome
   when: check_chrome.rc != 0 and install_chrome
+
+- name: Check if Discord is installed
+  ansible.builtin.shell: brew list discord
+  register: check_discord
+  failed_when: check_discord.rc >= 2
+- name: Install Discord if not found in system
+  ansible.builtin.shell: brew install --cask discord
+  when: check_discord.rc != 0 and install_discord
+
