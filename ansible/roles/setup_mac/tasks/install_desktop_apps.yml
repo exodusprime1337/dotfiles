@@ -44,7 +44,7 @@
   failed_when: check_firefox.rc >= 2
 - name: Install Firefox if not found in system
   ansible.builtin.shell: brew install --cask firefox
-  when: check_firefox.rc != 0
+  when: check_firefox.rc != 0 and install_firefox
 
 - name: Check if Chrome is installed
   ansible.builtin.shell: brew list google-chrome
@@ -52,4 +52,4 @@
   failed_when: check_chrome.rc >= 2
 - name: Install Chrome if not found in system
   ansible.builtin.shell: brew install --cask google-chrome
-  when: check_chrome.rc != 0
+  when: check_chrome.rc != 0 and install_chrome
