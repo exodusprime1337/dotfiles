@@ -14,6 +14,8 @@
     install_firefox: true
     install_chrome: true
     install_discord: true
+    install_rectangle: true
+    install_maccy: true
 
     # Terminal apps
     install_awscli: true

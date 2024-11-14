@@ -68,4 +68,13 @@
   failed_when: check_rectangle.rc >= 2
 - name: Install Rectangle if not found in system
   ansible.builtin.shell: brew install --cask rectangle
-  when: check_rectangle.rc != 0 and install_discord
+  when: check_rectangle.rc != 0 and install_rectangle
+
+- name: Check if Maccy is installed
+  ansible.builtin.shell: brew list maccy
+  register: check_maccy
+  failed_when: check_maccy.rc >= 2
+- name: Install Maccy if not found in system
+  ansible.builtin.shell: brew install --cask maccy
+  when: check_maccy.rc != 0 and install_maccy
+
