@@ -17,6 +17,9 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 - Postman
 - Firefox
 - Chrome
+- Maccy
+- Rectanble
+- Discord
 
 ### Terminal Apps
 - Oh My Posh
