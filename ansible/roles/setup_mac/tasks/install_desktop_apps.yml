@@ -62,3 +62,10 @@
   ansible.builtin.shell: brew install --cask discord
   when: check_discord.rc != 0 and install_discord
 
+- name: Check if Rectangle is installed
+  ansible.builtin.shell: brew list rectangle
+  register: check_rectangle
+  failed_when: check_rectangle.rc >= 2
+- name: Install Rectangle if not found in system
+  ansible.builtin.shell: brew install --cask rectangle
+  when: check_rectangle.rc != 0 and install_discord
