@@ -41,6 +41,10 @@ source <(fzf --zsh)
 export ENV_VARS_FILE="$HOME/.other_keys"
 [[ -f $ENV_VARS_FILE ]] && source $ENV_VARS_FILE
 
+# Include other environment file if present
+export ENV_VARS_2="$HOME/.other_other_keys"
+[[ -f $ENV_VARS_2 ]] && source $ENV_VARS_2
+
 # ZSH AutoSuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
