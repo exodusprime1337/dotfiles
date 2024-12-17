@@ -84,3 +84,11 @@
 - name: Install AWS CLI
   ansible.builtin.shell: brew install awscli
   when: awscli_check.rc != 0 and install_awscli
+
+- name: Check if MTR installed
+  ansible.builtin.shell: which mtr
+  register: mtr_check
+  failed_when: mtr_check.rc >= 2
+- name: Install MTR
+  ansible.builtin.shell: brew install mtr
+  when: mtr_check.rc != 0 
