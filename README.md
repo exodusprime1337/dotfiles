@@ -39,8 +39,6 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
     - NVM Docs: https://github.com/nvm-sh/nvm
 - Pyenv
     - Pyenv Docs: https://github.com/pyenv/pyenv
-- Pyenv VirtualEnv
-    - Pyenv Virtenv Docs: https://github.com/pyenv/pyenv-virtualenv
 - UV python package manager
     - UV Docs: https://github.com/astral-sh/uv
 - Docker Desktop

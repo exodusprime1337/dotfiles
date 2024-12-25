@@ -6,22 +6,6 @@
   ansible.builtin.shell: brew install nvm
   when: check_nvm.rc != 0 and install_nvm
 
-- name: Check if pyenv installed
-  ansible.builtin.shell: brew list pyenv
-  register: pyenv_check
-  failed_when: pyenv_check.rc >= 2
-- name: Install Pyenv
-  ansible.builtin.shell: brew install pyenv
-  when: pyenv_check.rc != 0 and install_pyenv
-
-- name: Check if pyenv virtualenv installed
-  ansible.builtin.shell: brew list  pyenv-virtualenv
-  register: pyenv_virtenv_check
-  failed_when: pyenv_virtenv_check.rc >= 2
-- name: Install Pyenv Virtualenv
-  ansible.builtin.shell: brew install pyenv-virtualenv
-  when: pyenv_virtenv_check.rc != 0 and install_pyenv_virtualenv
-
 - name: Check if UV installed
   ansible.builtin.shell: brew list uv
   register: uv_check
