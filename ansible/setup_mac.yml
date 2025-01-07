@@ -22,8 +22,6 @@
 
     # Developer apps
     install_nvm: true
-    install_pyenv: true
-    install_pyenv_virtualenv: true # if pyenv is false, this should also be false
     install_uv: true
     install_docker: true
   roles:
