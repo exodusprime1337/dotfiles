@@ -16,6 +16,8 @@
     install_discord: true
     install_rectangle: true
     install_maccy: true
+    install_ghostty: true
+    install_iterm2: false
 
     # Terminal apps
     install_awscli: true

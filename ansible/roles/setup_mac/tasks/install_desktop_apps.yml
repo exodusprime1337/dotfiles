@@ -12,7 +12,7 @@
   failed_when: check_iterm2.rc >= 2
 - name: Install iterm2 if not found in system
   ansible.builtin.shell: brew install --cask iterm2
-  when: check_iterm2.rc != 0
+  when: check_iterm2.rc != 0 and install_iterm2
 
 - name: Check if VS Code is installed
   ansible.builtin.shell: brew list visual-studio-code
@@ -78,3 +78,10 @@
   ansible.builtin.shell: brew install --cask maccy
   when: check_maccy.rc != 0 and install_maccy
 
+- name: Check if Ghostty is installed
+  ansible.builtin.shell: brew list ghostty
+  register: check_ghostty
+  failed_when: check_ghostty.rc >= 2
+- name: Install Ghostty if not found in system
+  ansible.builtin.shell: brew install --cask ghostty
+  when: check_ghostty.rc != 0 and install_ghostty
