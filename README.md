@@ -12,6 +12,7 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 ### Desktop Apps
 - slack
 - iterm2
+- Ghostty
 - VSCode
 - MacPass
 - Postman
