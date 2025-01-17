@@ -1,6 +1,10 @@
 autoload -Uz compinit
 compinit
 
+if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
+    export TERM=xterm-256color
+fi
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
