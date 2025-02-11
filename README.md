@@ -34,6 +34,7 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 - TLDR
 - AWSCLI
 - MTR
+- speedtest-cli
 
 ### Developer Tools
 - NVM

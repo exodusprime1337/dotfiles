@@ -92,3 +92,11 @@
 - name: Install MTR
   ansible.builtin.shell: brew install mtr
   when: mtr_check.rc != 0 
+
+- name: Check if speedtest-cli installed
+  ansible.builtin.shell: which speedtest
+  register: speedtest_check
+  failed_when: speedtest_check.rc >= 2
+- name: Install speedtest-cli
+  ansible.builtin.shell: brew install speedtest-cli
+  when: speedtest_check.rc != 0 
