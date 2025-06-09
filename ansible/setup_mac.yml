@@ -18,6 +18,7 @@
     install_maccy: true
     install_ghostty: true
     install_iterm2: false
+    install_windows_app: true
 
     # Terminal apps
     install_awscli: true

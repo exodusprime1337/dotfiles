@@ -85,3 +85,11 @@
 - name: Install Ghostty if not found in system
   ansible.builtin.shell: brew install --cask ghostty
   when: check_ghostty.rc != 0 and install_ghostty
+
+- name: Check if Windows App is installed
+  ansible.builtin.shell: brew list windows-app
+  register: check_windows_app
+  failed_when: check_windows_app.rc >= 2
+- name: Install Windows App if not found in system
+  ansible.builtin.shell: brew install --cask windows-app  
+  when: check_windows_app.rc != 0 and install_windows_app
