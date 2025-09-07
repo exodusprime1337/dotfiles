@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 .lock
+=======
+.config/bpytop
+.config/htop
+>>>>>>> 4fd682a2f65a9e2a6f3f3815c0f14d25ab15860c
