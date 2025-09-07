@@ -18,6 +18,7 @@
     install_maccy: true
     install_ghostty: true
     install_iterm2: false
+    install_raycast: true
 
     # Terminal apps
     install_awscli: true

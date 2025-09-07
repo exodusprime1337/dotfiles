@@ -85,3 +85,11 @@
 - name: Install Ghostty if not found in system
   ansible.builtin.shell: brew install --cask ghostty
   when: check_ghostty.rc != 0 and install_ghostty
+
+- name: Check if Raycast is installed
+  ansible.builtin.command: brew list raycast
+  register: check_raycast
+  failed_when: check_raycast.rc >= 2
+- name: Install raycast if not found in system
+  ansible.builtin.command: brew install --cask raycast
+  when: check_raycast.rc != 0 and install_raycast
