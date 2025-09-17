@@ -1,2 +1,6 @@
 .config/bpytop
 .config/htop
+.config/raycast
+.config/wireshark
+
+.DS_Store

@@ -93,3 +93,14 @@
 - name: Install Windows App if not found in system
   ansible.builtin.shell: brew install --cask windows-app  
   when: check_windows_app.rc != 0 and install_windows_app
+
+- name: Check if LM Studio is installed
+  ansible.builtin.shell: brew list lm-studio
+  register: check_lm_studio
+  failed_when: check_lm_studio.rc >= 2
+- name: Install LM Studio if not found in system
+  ansible.builtin.shell: brew install --cask lm-studio 
+  when: check_lm_studio.rc != 0 and install_lm_studio
+
+
+  

@@ -12,15 +12,17 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 ### Desktop Apps
 - slack
 - iterm2
-- Ghostty
 - VSCode
 - MacPass
 - Postman
 - Firefox
 - Chrome
-- Maccy
-- Rectanble
 - Discord
+- Rectanble
+- Maccy
+- Ghostty
+- Windows App
+- LM Studio
 
 ### Terminal Apps
 - Oh My Posh
@@ -30,6 +32,7 @@ Oh My Posh is installed here, in the `.config/ohymyposh/` folder is a `config.js
 - BPYTOP
 - bat
 - eza
+- FuzzyFinder
 - RipGrep
 - TLDR
 - AWSCLI

@@ -19,6 +19,7 @@
     install_ghostty: true
     install_iterm2: false
     install_windows_app: true
+    install_lm_studio: true
 
     # Terminal apps
     install_awscli: true
