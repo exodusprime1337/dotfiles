@@ -85,8 +85,6 @@
 - name: Install Ghostty if not found in system
   ansible.builtin.shell: brew install --cask ghostty
   when: check_ghostty.rc != 0 and install_ghostty
-
-<<<<<<< HEAD
 - name: Check if Raycast is installed
   ansible.builtin.command: brew list raycast
   register: check_raycast
@@ -94,7 +92,6 @@
 - name: Install raycast if not found in system
   ansible.builtin.command: brew install --cask raycast
   when: check_raycast.rc != 0 and install_raycast
-=======
 - name: Check if Windows App is installed
   ansible.builtin.shell: brew list windows-app
   register: check_windows_app
@@ -102,8 +99,6 @@
 - name: Install Windows App if not found in system
   ansible.builtin.shell: brew install --cask windows-app  
   when: check_windows_app.rc != 0 and install_windows_app
-<<<<<<< HEAD
-
 - name: Check if LM Studio is installed
   ansible.builtin.shell: brew list lm-studio
   register: check_lm_studio
@@ -111,9 +106,3 @@
 - name: Install LM Studio if not found in system
   ansible.builtin.shell: brew install --cask lm-studio 
   when: check_lm_studio.rc != 0 and install_lm_studio
-
-
-  
-=======
->>>>>>> 4fd682a2f65a9e2a6f3f3815c0f14d25ab15860c
->>>>>>> 0736c8a19f043c203e610b2eb4bcb0debc4dd3b8

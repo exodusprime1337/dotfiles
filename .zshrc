@@ -41,8 +41,6 @@ export ENV_VARS_FILE="$HOME/.other_keys"
 # ZSH AutoSuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-<<<<<<< HEAD
-=======
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
@@ -52,4 +50,3 @@ fi
 export PATH="$PATH:/Users/kennysambrook/.lmstudio/bin"
 # End of LM Studio CLI section
 
->>>>>>> 0736c8a19f043c203e610b2eb4bcb0debc4dd3b8
