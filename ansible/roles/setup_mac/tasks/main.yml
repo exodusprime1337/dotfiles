@@ -1,13 +1,13 @@
 ---
 - name: Install Desktop Apps
-  import_tasks: install_desktop_apps.yml
+  ansible.builtin.import_tasks: install_desktop_apps.yml
   when: install_desktop_apps
 - name: Install Terminal Apps
-  import_tasks: install_terminal_apps.yml
+  ansible.builtin.import_tasks: install_terminal_apps.yml
   when: install_terminal_apps
 - name: Install Developer Apps
-  import_tasks: install_developer_apps.yml
+  ansible.builtin.import_tasks: install_developer_apps.yml
   when: install_developer_apps
 - name: Install Fonts
-  import_tasks: install_fonts.yml
+  ansible.builtin.import_tasks: install_fonts.yml
   when: install_developer_fonts
