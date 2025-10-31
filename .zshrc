@@ -1,5 +1,5 @@
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit -u
+
 
 if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
     export TERM=xterm-256color
@@ -48,5 +48,10 @@ fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/kennysambrook/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ksambrook/.lmstudio/bin"
 # End of LM Studio CLI section
 
