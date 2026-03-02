@@ -1,5 +1,5 @@
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit -u
+
 
 if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
     export TERM=xterm-256color
@@ -49,8 +49,16 @@ fi
 export PATH="$PATH:/Users/kennysambrook/.lmstudio/bin"
 # End of LM Studio CLI section
 
+<<<<<<< HEAD
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/kennysambrook/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+=======
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ksambrook/.lmstudio/bin"
+# End of LM Studio CLI section
+
+>>>>>>> 7898451de0b2de9a139f48754d076cb7619bfc4e
