@@ -45,8 +45,12 @@ if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
 
-
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/kennysambrook/.lmstudio/bin"
 # End of LM Studio CLI section
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/kennysambrook/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
